@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>View Employee</title>
+</head>
+<body>
+<h2>Employee Details By ID</h2>
+<p><strong>ID : </strong><span th:text="${employee.id}"></span></p>
+<p><strong>FirstName : </strong><span th:text="${employee.firstname}"></span></p>
+<p><strong>LastName : </strong><span th:text="${employee.lastname}"></span></p>
+<p><strong>Department : </strong><span th:text="${employee.department}"></span></p>
+<p><strong>Email : </strong><span th:text="${employee.email}"></span></p>
+
+<a href="/">Back to Home Page</a>
+</body>
+</html>

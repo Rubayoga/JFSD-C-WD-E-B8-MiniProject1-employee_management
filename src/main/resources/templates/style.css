@@ -1,0 +1,85 @@
+
+   body{
+    font-family: sans-serif;
+    background-color: rgb(208, 232, 255);;
+    margin: 0;
+    padding: 0;
+   }
+
+   h2{
+    text-align: center;
+    margin-top: 20px;
+    color: blue;
+   }
+
+
+   table{
+    width: 80%;
+    margin: 20px auto;
+   }
+
+
+   table,th,td{
+    border: 1px solid #c8c7c7;
+   }
+
+
+   th,td{
+    padding: 10px;
+    text-align: center;
+   }
+
+   th{
+    background-color: #817f7f;
+   }
+
+   a{
+    text-decoration: none;
+    margin: 10px 15px;
+    color: white;
+    background-color: black;
+    padding: 8px 12px;
+    border-radius: 8px;
+   }
+
+   deletebtn{
+    text-decoration: none;
+    margin: 10px 15px;
+    color: white;
+    background-color: red;
+    padding: 8px 12px;
+    border-radius: 8px;
+   }
+
+      form{
+       width: 50%;
+       margin: 20px auto;
+       background-color: rgb(183, 221, 255);
+       padding: 20px;
+       border-radius: 10px;
+       box-shadow: 2px 5px 10px rgb(81, 152, 252);
+      }
+
+
+      label{
+       display: block;
+       margin-top: 10px;
+       font-weight: bold;
+      }
+
+      input[type="text"],input[type="email"],button{
+       width: 100%;
+       padding: 10px;
+       margin-top: 5px ;
+      }
+
+
+      button{
+       margin: 10px 15px;
+       color: white;
+       border: none;
+       cursor: pointer;
+       background-color: rgb(4, 2, 6);
+       padding: 8px 12px;
+       border-radius: 8px;
+      }

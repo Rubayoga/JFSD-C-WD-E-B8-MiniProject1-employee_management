@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Employee</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h2>Add Employee</h2>
+
+<form th:action="@{/add}" th:object="${employee}" method="post">
+
+  <label>First Name:</label>
+  <input type="text" th:field="*{firstname}" required>
+  <span th:if="${#fields.hasErrors('firstname')}" th:error="*{firstname}" class="error" > </span>
+
+  <br>
+  <label>Last Name:</label>
+  <input type="text" th:field="*{lastname}" required>
+  <span th:if="${#fields.hasErrors('lastname')}" th:error="*{lastname}" class="error" > </span>
+
+  <br>
+
+  <label>Department:</label>
+  <input type="text" th:field="*{department}" required>
+  <span th:if="${#fields.hasErrors('department')}" th:error="*{department}" class="error" > </span>
+
+  <br>
+
+  <label>Email:</label>
+  <input type="email" th:field="*{email}" required>
+  <span th:if="${#fields.hasErrors('email')}" th:error="*{email}" class="error" > </span>
+
+  <br>
+
+  <button type="submit">Save</button>
+
+</form>
+
+<a href="/" class="back-link">Back to Home Page</a>
+<!--navigate back to index.html page-->
+</body>
+</html>

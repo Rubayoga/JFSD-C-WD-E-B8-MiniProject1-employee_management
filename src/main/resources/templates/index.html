@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h2>Employee List</h2>
+<a href="/add" class="add">Add Employee</a>
+
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Department</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="employee: ${employees}">
+        <td th:text="${employee.id}"></td>
+        <td th:text="${employee.firstname}"></td>
+        <td th:text="${employee.lastname}"></td>
+        <td th:text="${employee.department}"></td>
+        <td th:text="${employee.email}"></td>
+
+        <td>
+            <a th:href="@{'view/' + ${employee.id}}">View</a>
+            <a th:href="@{'edit/' + ${employee.id}}">Edit</a>
+            <a th:href="@{'delete/' + ${employee.id}}" class="deletebtn" >Delete</a>
+        </td>
+    </tr>
+    </tbody>
+
+</table>
+
+</body>
+</html>

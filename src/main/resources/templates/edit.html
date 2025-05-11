@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employee</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+
+    <style>
+        form{
+    width: 50%;
+    margin: 20px auto;
+    background-color: rgb(183, 221, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px rgb(81, 152, 252);
+   }
+
+
+   label{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+   }
+
+   input[type="text"],input[type="email"],button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px ;
+   }
+
+
+   button{
+    margin: 10px 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(4, 2, 6);
+    padding: 8px 12px;
+    border-radius: 8px;
+   }
+    </style>
+</head>
+<body>
+
+<h2>Edit Employees</h2>
+
+<form th:action="@{/edit}"  method="post" class="edit-form">
+
+    <input type="hidden" name="id" th:value="${employee.id}">
+    <label>First Name:</label>
+    <input type="text" name="firstname"  th:value="${employee.firstname}" required> <br>
+
+    <label>Last Name:</label>
+    <input type="text" name="lastname"  th:value="${employee.lastname}" required> <br>
+
+
+    <label>Department:</label>
+    <input type="text" name="department"  th:value="${employee.department}" required> <br>
+
+    <label>Email:</label>
+    <input type="email" name="email"  th:value="${employee.email}" required> <br>
+
+    <button type="submit">Update</button>
+
+</form>
+<a href="/">Back to Home Page</a>
+</body>
+</html>
